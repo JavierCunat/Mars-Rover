@@ -61,13 +61,14 @@ else if (rover.direction === "E"){
   };
 
 
-// ----------------------Iteration 3 ---------------------- //
+// ----------------------Iteration 3 Combined With Iteration 5 ---------------------- //
 
 //Rover Moving Foward
 
-  function moveForward(rover){
-    console.log("moveForward was called")
-  }
+function moveForward(rover){
+  rover.travelLog.push(`${rover.x}, ${rover.y}`)
+  console.log("moveForward was called")
+}
 
   if (rover.direction === "N"){
     rover.y--
@@ -85,33 +86,23 @@ else if (rover.direction === "E"){
     rover.x--
   }
 
-  // -------------------------Iteration 4-------------------- //
+  // -------------------------Iteration 4 and Iteration 5-------------------- //
 
 
- // let roverPath = ["r","f","f","r","f","f",lfrff]
-
- function roverPath(eachPath){
-
-  for(let i=0; i< eachPath.length; i++){
-
-    let path = eachPath.substring(i, i+1);
-
-    if (roverPath === "f"){
-      moveForward(rover); 
+  let roverPath = ["r","f","f","r","f","f","l","f","r","f","f"]
+  roverPath.forEach((eachPath)=>{
+    if (roverPath = "f"){
+      moveForward(rover) 
     }
-    else if(roverPath === "l"){
-      turnLeft(rover);
+    else if(roverPath = "l"){
+      turnLeft(rover)
     }
-    else if(roverPath === "r"){
-      turnRight(rover);
+    else if(roverPath = "r"){
+      turnRight(rover)
     }
+  });
 
-  }
-
-}
-
-// ----------------------------Iteration 5------------------------ //
-
+// ----------------------------Iteration Bonus------------------------ //
 
 
 
