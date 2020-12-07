@@ -104,8 +104,52 @@ function moveForward(rover){
 
 // ----------------------------Iteration Bonus------------------------ //
 
+//Enforcing Boundaries
+
+function boundaries(rover){
+
+  if(rover.y < 0 ){
+    rover.y = 0;
+  }
+
+  if(rover.y > 10){
+    rover.y = 10;
+  }
+
+  if (rover.x > 10) {
+    rover.x = 10;
+  }
+
+  if (rover.x < 0){
+    rover.x = 0;
+  }
+}
 
 
+
+
+
+//Move Backwards Function
+function moveBackwards(rover){
+  rover.travelLog.push(`${rover.x}, ${rover.y}`)
+  console.log("moveFBackwards was called")
+}
+
+  if (rover.direction === "N"){
+    rover.y++
+  }
+
+  else if (rover.direction === "E" ){
+    rover.x--
+  }
+
+  else if (rover.direction === "S"){
+    rover.y--
+  }
+
+  else if (rover.direction === "W"){
+    rover.x++
+  }
 
 
 
